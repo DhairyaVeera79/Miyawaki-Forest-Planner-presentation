@@ -203,17 +203,21 @@ li + li {
 
 .image-card {
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 .image-figure {
   margin: 0;
   display: grid;
   gap: 0.62rem;
+  height: 100%;
 }
 
 .image-figure img {
   width: 100%;
-  height: auto;
+  height: clamp(220px, 28vw, 320px);
+  object-fit: cover;
   border-radius: 10px;
   border: 1px solid #d9e6dd;
   display: block;
@@ -234,24 +238,14 @@ li + li {
   text-decoration: underline;
 }
 
-.card-note {
-  margin-top: 0.8rem;
-  margin-bottom: 0;
-  padding: 0.58rem 0.66rem;
-  border-radius: 9px;
-  border: 1px dashed #cadee8;
-  background: var(--brand-soft-blue);
-  font-size: 0.88rem;
-}
-
 .map-figure {
-  margin-top: 0.9rem;
+  margin-top: 0.1rem;
 }
 
 .map-reference-image {
   width: 100%;
-  max-height: 320px;
-  object-fit: contain;
+  height: clamp(220px, 28vw, 320px);
+  object-fit: cover;
   background: #edf4ef;
 }
 
