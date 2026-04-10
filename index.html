@@ -23,15 +23,15 @@
         <div class="hero-panel summary-grid">
           <article>
             <h3>Build Deadline</h3>
-            <p>Core pilot-ready build date: 31 August 2026.</p>
+            <p>Core build completion target: 31 August 2026.</p>
           </article>
           <article>
             <h3>Offering Milestone</h3>
-            <p>Showcase-ready offering target: 26 September 2026.</p>
+            <p>Showcase-ready outcome target: September 2026.</p>
           </article>
           <article>
-            <h3>Mission Outcome</h3>
-            <p>Disciplined, data-backed, and dignified long-term ecological care.</p>
+            <h3>Execution Team</h3>
+            <p>Dhairya Veera, Tanvi Savani, and Avani Jariwala.</p>
           </article>
         </div>
       </div>
@@ -140,6 +140,36 @@
             <article class="card"><h3>Dashboard &amp; Reporting</h3><p>Project and portfolio visibility for phase status, update compliance, survival trends, and approved impact stories.</p></article>
           </div>
 
+          <div class="grid two mt">
+            <article class="card image-card">
+              <h3>Miyawaki Four-Layer Vegetation Reference</h3>
+              <figure class="image-figure">
+                <img
+                  src="https://cdn.sanity.io/images/oyzyxja8/v2/61185dc6452bc20db5e88c8c7c8fdffa63aa4132-1563x1080.jpg?w=2048&q=90&auto=format"
+                  alt="Miyawaki method visual reference showing multi-layer vegetation concept"
+                  loading="lazy"
+                />
+                <figcaption class="figure-credit">
+                  Reference image credit:
+                  <a href="https://www.sugiproject.com/blog/why-we-use-the-miyawaki-method" target="_blank" rel="noopener noreferrer">SUGi Project — Why we use the Miyawaki method</a>
+                </figcaption>
+              </figure>
+            </article>
+            <article class="card">
+              <h3>Recommended Geospatial Implementation Stack</h3>
+              <ul>
+                <li><strong>Map UI:</strong> Leaflet + Leaflet-Geoman for robust polygon draw/edit/snap and lasso-style workflows.</li>
+                <li><strong>Basemap strategy:</strong> OpenStreetMap tiles for baseline plus satellite-capable providers for site verification.</li>
+                <li><strong>Client-side geospatial:</strong> Turf.js for geometry checks and quick advisory analytics.</li>
+                <li><strong>Backend geospatial truth:</strong> PostGIS for projection-safe area calculations and audit-safe geometry storage.</li>
+                <li><strong>Scale-up path:</strong> MapLibre GL JS for high-performance vector rendering in future advanced visual modes.</li>
+              </ul>
+              <p class="card-note">
+                Map polygon reference image (bounding box example) will be inserted after you add the approved image file.
+              </p>
+            </article>
+          </div>
+
           <div class="diagram-block">
             <h3>Workflow Blueprint (Authoritative 9-Step Flow)</h3>
             <div class="workflow-phases" role="img" aria-label="Three-phase workflow covering planning, execution, and outcomes">
@@ -176,19 +206,19 @@
               <div class="arch-node">Users (C1/C2/C3/C4, Advisors, Admin)</div>
               <div class="arch-connector">↓</div>
               <div class="arch-row two-col">
-                <div class="arch-node emphasis">Field and Leadership Interfaces</div>
-                <div class="arch-node emphasis">Role-Based Dashboards and Story Views</div>
+                <div class="arch-node emphasis">Web Portal (Planning, SOP, Monitoring, Dashboards)</div>
+                <div class="arch-node emphasis">Map Workspace (Leaflet + Geoman Polygon Tools)</div>
               </div>
               <div class="arch-connector">↓</div>
               <div class="arch-row two-col">
-                <div class="arch-node">Planning, SOP, Monitoring, and Reporting Services</div>
-                <div class="arch-node">RBAC, Audit, and Approval Enforcement</div>
+                <div class="arch-node">Application Services: Planning, Procurement, SOP, Monitoring, Reporting</div>
+                <div class="arch-node">Governance Layer: RBAC, Audit Trails, Approval and Publish Controls</div>
               </div>
               <div class="arch-connector">↓</div>
               <div class="arch-row three-col">
-                <div class="arch-node">Project, Polygon, Species, Procurement, Inventory Data</div>
-                <div class="arch-node">Assistive AI and Forecasting Services</div>
-                <div class="arch-node">Evidence, Moderation, and Governance Controls</div>
+                <div class="arch-node">PostgreSQL + PostGIS (Project, Polygon, Species, Procurement, Inventory)</div>
+                <div class="arch-node">Assistive AI + Forecasting (Advisory, Human-Validated)</div>
+                <div class="arch-node">Media and Notification Pipelines (Evidence, Reminders, Moderation)</div>
               </div>
             </div>
           </div>

@@ -201,6 +201,49 @@ li + li {
   min-height: 170px;
 }
 
+.image-card {
+  overflow: hidden;
+}
+
+.image-figure {
+  margin: 0;
+  display: grid;
+  gap: 0.62rem;
+}
+
+.image-figure img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  border: 1px solid #d9e6dd;
+  display: block;
+}
+
+.figure-credit {
+  font-size: 0.8rem;
+  color: #5c6f65;
+  line-height: 1.45;
+}
+
+.figure-credit a {
+  color: var(--brand-blue);
+  text-decoration: none;
+}
+
+.figure-credit a:hover {
+  text-decoration: underline;
+}
+
+.card-note {
+  margin-top: 0.8rem;
+  margin-bottom: 0;
+  padding: 0.58rem 0.66rem;
+  border-radius: 9px;
+  border: 1px dashed #cadee8;
+  background: var(--brand-soft-blue);
+  font-size: 0.88rem;
+}
+
 .diagram-block {
   margin-top: 1.25rem;
   background: #fff;
