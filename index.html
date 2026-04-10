@@ -1,410 +1,400 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Miyawaki Forest Planner — Stakeholder Presentation</title>
+    <title>Miyawaki Forest Planner | Stakeholder Presentation</title>
     <meta
       name="description"
-      content="Stakeholder one-page presentation for SRLC Miyawaki Forest Planner: problem, solution, users, roadmap to September 2026, and dependencies."
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
+      content="Stakeholder presentation for Miyawaki Forest Planner covering problem, solution, users, roadmap to September 2026, and implementation dependencies."
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header class="hero">
-      <div class="hero__content container">
-        <p class="eyebrow">SRLC AI Portfolio • Project 4</p>
+    <header class="hero" id="top">
+      <div class="container">
+        <p class="eyebrow">Shrimad Rajchandra Love and Care</p>
         <h1>Miyawaki Forest Planner</h1>
-        <p class="hero__subtitle">
-          A practical and mission-aligned platform to plan, execute, monitor, and communicate
-          Miyawaki afforestation outcomes with discipline, transparency, and long-term ecological care.
+        <p class="subtitle">
+          A practical and mission-aligned planning platform to standardize Miyawaki afforestation
+          execution, improve survival outcomes, and deliver transparent ecological impact communication.
         </p>
-        <div class="hero__meta">
-          <span>Core Build Target: <strong>31 August 2026</strong></span>
-          <span>Offering Readiness: <strong>26 September 2026</strong></span>
+
+        <div class="hero-panel summary-grid">
+          <article>
+            <h3>Build Deadline</h3>
+            <p>Core build completion target: 31 August 2026.</p>
+          </article>
+          <article>
+            <h3>Offering Milestone</h3>
+            <p>Showcase-ready offering target: 26 September 2026.</p>
+          </article>
+          <article>
+            <h3>Mission Outcome</h3>
+            <p>Disciplined, data-backed, and dignified long-term ecological care.</p>
+          </article>
         </div>
       </div>
     </header>
 
-    <main class="container">
-      <section id="problem" class="section">
-        <h2>The problem you are solving</h2>
-        <div class="grid grid--2">
-          <article class="card">
-            <h3>Why SRLC needs this now</h3>
-            <ul>
-              <li>Afforestation seva has strong intent, but execution can become fragmented across locations.</li>
-              <li>As project volume grows, organizational memory must shift from ad-hoc updates to durable records.</li>
-              <li>Leadership, sevaks, donors, and beneficiaries require transparent, evidence-backed impact pathways.</li>
-              <li>Dates are fixed, so execution quality and phased delivery discipline are essential.</li>
-            </ul>
-          </article>
-          <article class="card">
-            <h3>Current pain points</h3>
-            <ul>
-              <li>Site planning is often manual, with inconsistent digital workflows.</li>
-              <li>Species selection and Miyawaki layer balancing vary across teams.</li>
-              <li>Sapling quantity, procurement buffers, and inventory tracking are not standardized end-to-end.</li>
-              <li>Field SOPs are not always available as one guided sequence for new volunteers.</li>
-              <li>Monitoring cadence, survival tracking, and evidence quality are uneven.</li>
-              <li>Impact communication is harder without verified milestone and media trails.</li>
-            </ul>
-          </article>
-        </div>
-
-        <article class="card card--wide">
-          <h3>Impact at stake if gaps continue</h3>
-          <div class="pill-row">
-            <span class="pill">Reduced survival outcomes</span>
-            <span class="pill">Higher rework and coordination overhead</span>
-            <span class="pill">Lower governance confidence</span>
-            <span class="pill">Weaker donor and beneficiary reporting readiness</span>
-          </div>
-        </article>
-      </section>
-
-      <section id="solution" class="section">
-        <h2>The proposed solution</h2>
-
-        <div class="grid grid--2">
-          <article class="card">
-            <h3>End-to-end product vision</h3>
-            <p>
-              Deliver a field-friendly platform that enables teams to define sites, generate Miyawaki-native
-              plans, operationalize procurement, run SOP-driven execution, monitor growth, and publish
-              approved impact narratives.
-            </p>
-            <ul>
-              <li>India-first native species planning with curated references and expert override.</li>
-              <li>Balanced four-layer Miyawaki planning: canopy, tree, sub-tree, and shrub.</li>
-              <li>Role-based governance across C1/C2/C3/C4 stakeholders, advisors, and admins.</li>
-            </ul>
-          </article>
-
-          <article class="card">
-            <h3>Core modules in scope</h3>
-            <ul>
-              <li>Site planner: polygon draw/re-draw, area, centroid, coordinates, region detection, audit history.</li>
-              <li>Ecological planning: native shortlist by geography, layer mapping, optional tags, availability signal.</li>
-              <li>Quantity and procurement: density-controlled counts, buffer logic, PO-ready vendor output, IMS-lite.</li>
-              <li>Layout blueprint: spacing rules, geometry options, density cap enforcement, visual brief summary.</li>
-              <li>SOP and readiness: checklists, natural-input-first guidance, quick orientation mode.</li>
-              <li>Monitoring and dashboard: cadence reminders, photo capture points, risk flags, leadership rollups.</li>
-            </ul>
-          </article>
-        </div>
-
-        <article class="card card--wide">
-          <h3>Workflow blueprint</h3>
-          <div class="phase-flow" role="img" aria-label="Three-phase workflow from planning to monitoring and governance">
-            <div class="phase">
-              <h4>Phase 1 · Intake and Planning</h4>
-              <ol>
-                <li>Project setup with ownership and metadata</li>
-                <li>Satellite polygon selection and revision snapshots</li>
-                <li>Density inputs and optional objectives</li>
-                <li>Native species and four-layer Miyawaki plan</li>
-                <li>Quantity, buffer, procurement, and PO-ready outputs</li>
-              </ol>
-            </div>
-            <div class="phase-arrow" aria-hidden="true">→</div>
-            <div class="phase">
-              <h4>Phase 2 · Execution and Monitoring</h4>
-              <ol>
-                <li>Layout guidance with spacing feasibility checks</li>
-                <li>SOP-driven field execution and natural-input protocols</li>
-                <li>Checklist-based onboarding for new volunteers</li>
-                <li>Timestamped photo and metric logging by capture points</li>
-                <li>Advisory alerts for stress indicators and overdue updates</li>
-              </ol>
-            </div>
-            <div class="phase-arrow" aria-hidden="true">→</div>
-            <div class="phase">
-              <h4>Phase 3 · Outcomes and Governance</h4>
-              <ol>
-                <li>Project and portfolio dashboards with risk visibility</li>
-                <li>Forecasts for phase completion and maturity trajectory</li>
-                <li>Approved impact stories for donor and beneficiary communication</li>
-                <li>Contribution mapping at forest and zone level</li>
-                <li>Auditable records for planning and publishing decisions</li>
-              </ol>
+    <main>
+      <section class="section" id="problem">
+        <div class="container">
+          <div class="section-head">
+            <span class="section-num">01</span>
+            <div>
+              <h2>The problem you are solving</h2>
+              <p>
+                SRLC’s afforestation seva has strong intent and impact, but execution quality becomes uneven
+                without a central planning and monitoring system as project volume increases.
+              </p>
             </div>
           </div>
-        </article>
 
-        <article class="card card--wide">
-          <h3>Architecture and intelligence principles</h3>
-          <div class="architecture">
-            <div class="architecture__layer">
-              <h4>User Interfaces</h4>
-              <p>Field mobile workflows, coordinator console, leadership dashboard, approved storytelling views.</p>
-            </div>
-            <div class="architecture__layer">
-              <h4>Core Services</h4>
-              <p>Site planner, species engine, layout and SOP modules, monitoring, reporting, role-based governance.</p>
-            </div>
-            <div class="architecture__layer">
-              <h4>Data and AI Governance</h4>
-              <p>Structured entities, media pipeline, analytics, advisory AI with confidence and mandatory human review.</p>
-            </div>
+          <div class="grid two">
+            <article class="card">
+              <h3>Current execution pain</h3>
+              <ul>
+                <li>Site planning relies on manual judgment without a standardized digital flow.</li>
+                <li>Species selection and layer balancing are inconsistent across locations.</li>
+                <li>Sapling quantity, buffers, procurement planning, and inventory discipline vary by team.</li>
+                <li>Field SOP guidance is not always delivered in one guided sequence for new volunteers.</li>
+                <li>Monitoring cadence, photo evidence quality, and survival tracking are uneven.</li>
+              </ul>
+            </article>
+            <article class="card">
+              <h3>Why this is critical now</h3>
+              <ul>
+                <li>Fixed delivery dates require scope discipline with reliable operational execution.</li>
+                <li>Leadership needs auditable records, risk visibility, and portfolio-level confidence.</li>
+                <li>Donor and beneficiary communication needs verified, evidence-backed impact pathways.</li>
+                <li>Without structure, coordination overhead and rework can reduce ecological outcomes.</li>
+              </ul>
+            </article>
           </div>
-          <div class="pill-row">
-            <span class="pill">AI is assistive, transparent, and overrideable</span>
-            <span class="pill">No autonomous irreversible decisions</span>
-            <span class="pill">External communication requires approved data</span>
-            <span class="pill">Disease and maturity conclusions require expert validation</span>
-          </div>
-        </article>
 
-        <div class="grid grid--2">
-          <article class="card">
-            <h3>Core data foundation</h3>
-            <p>
-              The platform tracks a complete record across projects, site polygons, species catalog entries,
-              layer assignments, quantity plans, procurement batches, purchase orders, inventory ledgers,
-              SOP tasks, monitoring entries, media assets, forecasts, risk flags, and impact stories.
-            </p>
-          </article>
-          <article class="card">
-            <h3>Analytics outcomes</h3>
-            <ul>
-              <li>Survival trends over time and species-level performance visibility.</li>
-              <li>Delay and dropout risk indicators with phase forecast confidence.</li>
-              <li>Project-to-project compliance comparison for leadership oversight.</li>
-              <li>Contribution-to-impact summaries for donor communication quality.</li>
-            </ul>
-          </article>
+          <div class="single-row mt">
+            <article class="card">
+              <h3>Core problem statement</h3>
+              <p>
+                The current afforestation operating model is not consistently scalable. SRLC needs a unified,
+                role-aware system that standardizes planning, procurement, field execution, monitoring, and
+                impact reporting while preserving human ecological accountability.
+              </p>
+            </article>
+          </div>
         </div>
       </section>
 
-      <section id="users" class="section">
-        <h2>Who inside SRLC will use it and benefit</h2>
-        <div class="grid grid--2">
-          <article class="card">
-            <h3>Primary users and responsibilities</h3>
-            <ul>
-              <li><strong>Field Sevaks (C4/C3):</strong> execute plantations, follow SOPs, submit updates and media evidence.</li>
-              <li><strong>Seva Coordinators and Leads (C2):</strong> approve plans, monitor milestones, and enforce execution cadence.</li>
-              <li><strong>Trustees and Leadership (C1):</strong> review portfolio progress, risks, and impact quality.</li>
-              <li><strong>Environmental Domain Advisors:</strong> validate ecological suitability and species choices.</li>
-              <li><strong>Platform Admins:</strong> manage permissions, data quality controls, and publish governance.</li>
-            </ul>
-          </article>
-          <article class="card">
-            <h3>Secondary audiences and value</h3>
-            <ul>
-              <li><strong>Donors:</strong> transparent evidence from contribution to ecological outcomes.</li>
-              <li><strong>Beneficiaries and communities:</strong> dignified, non-extractive communication of progress.</li>
-              <li><strong>Nurseries and local collaborators:</strong> clearer procurement and coordination pathways.</li>
-            </ul>
-            <h3 class="h3-gap">Mission and cultural grounding</h3>
-            <ul>
-              <li>Supports SRLC’s environmental seva and humanitarian spirit with disciplined execution.</li>
-              <li>Uses respectful mission language and preserves reverential references appropriately.</li>
-              <li>Promotes local engagement and employment opportunities where feasible.</li>
-            </ul>
-          </article>
-        </div>
-
-        <article class="card card--wide">
-          <h3>Operational outcomes by user group</h3>
-          <div class="grid grid--3">
-            <div class="mini-card">
-              <h4>Field Teams</h4>
-              <p>Faster onboarding, clearer checklists, lower ambiguity, and stronger execution continuity.</p>
-            </div>
-            <div class="mini-card">
-              <h4>Coordinators</h4>
-              <p>Better milestone control, risk visibility, and reduced follow-up overhead.</p>
-            </div>
-            <div class="mini-card">
-              <h4>Leadership</h4>
-              <p>Portfolio-level confidence through auditable data, trend visibility, and governance readiness.</p>
+      <section class="section alt" id="solution">
+        <div class="container">
+          <div class="section-head">
+            <span class="section-num">02</span>
+            <div>
+              <h2>The proposed solution</h2>
+              <p>
+                Miyawaki Forest Planner is the end-to-end internal operating system for site selection,
+                four-layer native planning, procurement, SOP execution, monitoring intelligence, and approved impact storytelling.
+              </p>
             </div>
           </div>
-        </article>
-      </section>
 
-      <section id="roadmap" class="section">
-        <h2>What success looks like by September 2026 (roadmap)</h2>
+          <div class="grid three">
+            <article class="card">
+              <h3>Strategic objectives</h3>
+              <ul>
+                <li>Standardize end-to-end Miyawaki project execution across geographies.</li>
+                <li>Improve survival outcomes through better planning and monitoring discipline.</li>
+                <li>Reduce field rework and coordinator overhead.</li>
+                <li>Enable donor-ready transparency through structured evidence records.</li>
+              </ul>
+            </article>
+            <article class="card">
+              <h3>In scope by core build</h3>
+              <ul>
+                <li>Map polygon planning with revision history and metadata extraction.</li>
+                <li>Native species and four-layer planning with expert override.</li>
+                <li>Density-based quantity and PO-ready procurement outputs.</li>
+                <li>SOP-driven execution, monitoring cadence, and governance dashboards.</li>
+              </ul>
+            </article>
+            <article class="card">
+              <h3>Post-deadline scope</h3>
+              <ul>
+                <li>Water-body, path, fireline, and topography-aware optimization.</li>
+                <li>3D explorer and species-only visual mode.</li>
+                <li>Sapling-level identity at scale and advanced vendor intelligence.</li>
+                <li>Enhanced donor traceability experiences.</li>
+              </ul>
+            </article>
+          </div>
 
-        <article class="card card--wide">
-          <h3>Phased delivery timeline</h3>
-          <div class="timeline" role="img" aria-label="Roadmap from April to September 2026 with phased outputs">
-            <div class="timeline__item">
-              <span class="timeline__date">April 2026 · V0</span>
-              <h4>Discovery and Validation</h4>
-              <p>Scope lock, role matrix, pilot workflow validation, baseline data model, acceptance criteria.</p>
-            </div>
-            <div class="timeline__arrow" aria-hidden="true">→</div>
-            <div class="timeline__item">
-              <span class="timeline__date">May 2026 · V1</span>
-              <h4>Core Planning MVP</h4>
-              <p>Site planner, layer planning v1, procurement outputs, dashboard baseline, PO-ready artifacting.</p>
-            </div>
-            <div class="timeline__arrow" aria-hidden="true">→</div>
-            <div class="timeline__item">
-              <span class="timeline__date">June 2026 · V2</span>
-              <h4>Field Execution and SOP</h4>
-              <p>Guided SOPs, layout templates, accountability tracking, natural-input protocols, density controls.</p>
-            </div>
-            <div class="timeline__arrow" aria-hidden="true">→</div>
-            <div class="timeline__item">
-              <span class="timeline__date">July 2026 · V3</span>
-              <h4>Monitoring Intelligence</h4>
-              <p>Cadence-based uploads, advisory alerts, leadership summaries, maturity and phase forecasting.</p>
-            </div>
-            <div class="timeline__arrow" aria-hidden="true">→</div>
-            <div class="timeline__item timeline__item--highlight">
-              <span class="timeline__date">August 2026 · V4</span>
-              <h4>Offering-Ready Stabilization</h4>
-              <p>Data hardening, permissions polish, reporting readiness, stable must-have sign-off by 31 August.</p>
-            </div>
-            <div class="timeline__arrow" aria-hidden="true">→</div>
-            <div class="timeline__item timeline__item--goal">
-              <span class="timeline__date">September 2026</span>
-              <h4>Offering Milestone</h4>
-              <p>Controlled UAT, narrative readiness, governance checks, and final offering on 26 September.</p>
+          <div class="module-grid">
+            <article class="card"><h3>Site Planner</h3><p>Polygon draw and re-draw, centroid and coordinate capture, region context detection, and full boundary audit history.</p></article>
+            <article class="card"><h3>Ecological Planning</h3><p>India-first native shortlist mapped to canopy, tree, sub-tree, and shrub layers with practical local adaptability.</p></article>
+            <article class="card"><h3>Quantity &amp; Procurement</h3><p>Density sensitivity, survival-risk buffers, species-wise quantities, vendor sheets, and purchase-order-ready output.</p></article>
+            <article class="card"><h3>Inventory Baseline</h3><p>IMS-lite tracking for required, ordered, received, planted, and replacement-buffer sapling counts.</p></article>
+            <article class="card"><h3>Layout Blueprint</h3><p>Spacing recommendations, geometry variants, and practical density caps to avoid non-viable plantation patterns.</p></article>
+            <article class="card"><h3>SOP &amp; Readiness</h3><p>Guided checklists for soil prep, natural inputs, plantation sequence, watering cadence, protection, and early care.</p></article>
+            <article class="card"><h3>Monitoring Intelligence</h3><p>Timestamped photo updates by capture points, reminders, risk flags, advisory stress alerts, and maturity forecasting.</p></article>
+            <article class="card"><h3>Dashboard &amp; Reporting</h3><p>Project and portfolio visibility for phase status, update compliance, survival trends, and approved impact stories.</p></article>
+          </div>
+
+          <div class="diagram-block">
+            <h3>Workflow Blueprint (Authoritative 9-Step Flow)</h3>
+            <div class="workflow-phases" role="img" aria-label="Three-phase workflow covering planning, execution, and outcomes">
+              <article class="phase-card">
+                <h4>Phase 1 • Intake and Planning</h4>
+                <ol>
+                  <li>Create project and confirm site ownership context.</li>
+                  <li>Draw or revise boundary polygon and capture metadata.</li>
+                  <li>Set density objectives and generate native four-layer plan.</li>
+                </ol>
+              </article>
+              <article class="phase-card">
+                <h4>Phase 2 • Execution and Monitoring</h4>
+                <ol>
+                  <li>Generate quantities, procurement sheets, and layout guidance.</li>
+                  <li>Run SOP-guided field execution with natural-input-first readiness.</li>
+                  <li>Capture periodic photos and metrics with reminder-driven cadence.</li>
+                </ol>
+              </article>
+              <article class="phase-card">
+                <h4>Phase 3 • Outcomes and Governance</h4>
+                <ol>
+                  <li>Surface phase status, delays, and risk flags in dashboards.</li>
+                  <li>Forecast maturity window and transition-to-self-sustaining trajectory.</li>
+                  <li>Publish approved donor and beneficiary impact narratives from verified evidence.</li>
+                </ol>
+              </article>
             </div>
           </div>
-        </article>
 
-        <div class="grid grid--2">
-          <article class="card">
-            <h3>Success indicators by September 2026</h3>
-            <ul>
-              <li>Pilot projects run from site selection through procurement without external dependency gaps.</li>
-              <li>SOP-driven execution can be performed by new teams with confidence.</li>
-              <li>Monitoring cadence and dashboard risk visibility are active across pilot locations.</li>
-              <li>Approved evidence can be translated into donor and beneficiary impact narratives.</li>
-              <li>Leadership can assess project health, survival trends, and phase adherence portfolio-wide.</li>
-            </ul>
-          </article>
-          <article class="card">
-            <h3>Measurement framework</h3>
-            <ul>
-              <li>Site planning completion time and procurement turnaround time.</li>
-              <li>Milestone logging compliance and update cadence adherence.</li>
-              <li>Sapling survival rates at 3, 6, and 12 months.</li>
-              <li>Phase completion reliability and forecast confidence by location.</li>
-              <li>Quality and volume of publishable impact summaries.</li>
-              <li>Stakeholder confidence in internal review and donor communication readiness.</li>
-            </ul>
-          </article>
-        </div>
-
-        <article class="card card--wide">
-          <h3>Post-deadline expansion (from October 2026 onward)</h3>
-          <div class="pill-row">
-            <span class="pill">Water-body, path, fireline, and topography-aware optimization</span>
-            <span class="pill">3D visual explorer and species-only map mode</span>
-            <span class="pill">Advanced inventory intelligence and vendor performance hooks</span>
-            <span class="pill">Sapling-level identity and donor trace experiences</span>
+          <div class="diagram-block">
+            <h3>Solution Architecture (High-Level)</h3>
+            <div class="architecture" role="img" aria-label="High-level architecture diagram">
+              <div class="arch-node">Users (C1/C2/C3/C4, Advisors, Admin)</div>
+              <div class="arch-connector">↓</div>
+              <div class="arch-row two-col">
+                <div class="arch-node emphasis">Field and Leadership Interfaces</div>
+                <div class="arch-node emphasis">Role-Based Dashboards and Story Views</div>
+              </div>
+              <div class="arch-connector">↓</div>
+              <div class="arch-row two-col">
+                <div class="arch-node">Planning, SOP, Monitoring, and Reporting Services</div>
+                <div class="arch-node">RBAC, Audit, and Approval Enforcement</div>
+              </div>
+              <div class="arch-connector">↓</div>
+              <div class="arch-row three-col">
+                <div class="arch-node">Project, Polygon, Species, Procurement, Inventory Data</div>
+                <div class="arch-node">Assistive AI and Forecasting Services</div>
+                <div class="arch-node">Evidence, Moderation, and Governance Controls</div>
+              </div>
+            </div>
           </div>
-        </article>
-
-        <div class="grid grid--2">
-          <article class="card">
-            <h3>Core build acceptance by 31 August 2026</h3>
-            <ul>
-              <li>Pilot flow runs end-to-end from site planning through procurement outputs.</li>
-              <li>New teams execute through SOP guidance without external document dependency.</li>
-              <li>Monitoring data is reviewed and visible in dashboard risk views.</li>
-              <li>Impact narratives are generated only from approved project evidence.</li>
-            </ul>
-          </article>
-          <article class="card">
-            <h3>Delivery governance cadence</h3>
-            <ul>
-              <li>Must/Should/Could quality gates protect fixed-date delivery discipline.</li>
-              <li>Should-have scope is included only when stable and testable.</li>
-              <li>Weekly governance reviews run through August 2026.</li>
-              <li>Immediate execution priorities: scope lock, pilot geography confirmation, and ecological reviewer panel activation.</li>
-            </ul>
-          </article>
         </div>
       </section>
 
-      <section id="dependencies" class="section section--last">
-        <h2>Key technical or operational dependencies</h2>
+      <section class="section" id="users">
+        <div class="container">
+          <div class="section-head">
+            <span class="section-num">03</span>
+            <div>
+              <h2>Who inside SRLC will use it and benefit</h2>
+              <p>
+                The platform is role-aware by design so each stakeholder receives relevant context,
+                while leadership gets portfolio visibility for governance and decision quality.
+              </p>
+            </div>
+          </div>
 
-        <div class="grid grid--3">
-          <article class="card">
-            <h3>Operational dependencies</h3>
-            <ul>
-              <li>Ecological validator network for species and plan approval checkpoints.</li>
-              <li>Geography-wise nursery and vendor ecosystem mapping.</li>
-              <li>SOP ownership, training accountability, and steady field participation models.</li>
-              <li>Consistent monitoring commitment and escalation discipline by project teams.</li>
-            </ul>
-          </article>
+          <div class="grid two">
+            <article class="card">
+              <h3>Primary users</h3>
+              <ul>
+                <li><strong>Field Sevaks (C4/C3):</strong> execute tasks, follow SOPs, upload updates and media evidence.</li>
+                <li><strong>Seva Coordinators and Leads (C2):</strong> approve plans, enforce cadence, and monitor milestones.</li>
+                <li><strong>Trustees and Leadership (C1):</strong> review project health, risks, and portfolio outcomes.</li>
+                <li><strong>Environmental Advisors:</strong> validate species suitability and ecological appropriateness.</li>
+                <li><strong>Platform Admins:</strong> manage permissions, data quality, and publication controls.</li>
+              </ul>
+            </article>
+            <article class="card">
+              <h3>Secondary beneficiaries</h3>
+              <ul>
+                <li><strong>Donors:</strong> transparent evidence linking contribution, execution, and ecological outcome.</li>
+                <li><strong>Beneficiaries and communities:</strong> dignified and non-extractive progress communication.</li>
+                <li><strong>Nurseries and collaborators:</strong> clearer procurement and implementation coordination.</li>
+              </ul>
+            </article>
+          </div>
 
-          <article class="card">
-            <h3>Data dependencies</h3>
-            <ul>
-              <li>Regional native species references and lifecycle information.</li>
-              <li>Climate and soil context where available.</li>
-              <li>Historical plantation outcomes for baseline calibration.</li>
-              <li>High-quality field media and metadata discipline across teams.</li>
-            </ul>
-          </article>
-
-          <article class="card">
-            <h3>Platform dependencies</h3>
-            <ul>
-              <li>Authentication and role-based access controls.</li>
-              <li>Reliable storage and media pipeline.</li>
-              <li>Notification and reminder channels.</li>
-              <li>Reporting stack for project and portfolio analytics.</li>
-            </ul>
-          </article>
+          <div class="grid three mt">
+            <article class="card"><h3>Field Efficiency</h3><p>Guided checklists and structured workflows reduce ambiguity and execution drift.</p></article>
+            <article class="card"><h3>Coordinator Control</h3><p>Better milestone discipline, escalation visibility, and reduced follow-up overhead.</p></article>
+            <article class="card"><h3>Leadership Confidence</h3><p>Portfolio-level trend visibility with auditable data and risk context.</p></article>
+            <article class="card"><h3>Institutional Memory</h3><p>Persistent records preserve context across volunteer transitions and future cycles.</p></article>
+            <article class="card"><h3>Cultural Integrity</h3><p>Mission language stays respectful, reverentially accurate, and community-sensitive.</p></article>
+            <article class="card"><h3>Communication Quality</h3><p>Approved, evidence-backed narratives improve stakeholder trust and clarity.</p></article>
+          </div>
         </div>
+      </section>
 
-        <div class="grid grid--2">
-          <article class="card">
-            <h3>Risk controls and mitigations</h3>
-            <ul>
-              <li>Species mismatch risk reduced by mandatory expert review before plan lock.</li>
-              <li>Monitoring inconsistency reduced through reminders, accountability, and escalation views.</li>
-              <li>AI over-reliance reduced through advisory-only behavior and human sign-off.</li>
-              <li>Volunteer turnover managed through SOP continuity and persistent project memory.</li>
-              <li>Reporting inaccuracies prevented by publishing only approved and verified data.</li>
-            </ul>
-          </article>
+      <section class="section alt" id="roadmap">
+        <div class="container">
+          <div class="section-head">
+            <span class="section-num">04</span>
+            <div>
+              <h2>What success looks like by September 2026 (roadmap)</h2>
+              <p>
+                Delivery is phased to maximize value by 31 August 2026 and ensure offering readiness,
+                governance quality, and stakeholder demonstration stability by September.
+              </p>
+            </div>
+          </div>
 
-          <article class="card">
-            <h3>Non-functional readiness requirements</h3>
-            <ul>
-              <li>Usability for field conditions with minimal friction.</li>
-              <li>Reliability under intermittent connectivity patterns where feasible.</li>
-              <li>Security, auditability, and governance for key decisions.</li>
-              <li>Scalability from pilot execution to multi-site portfolios.</li>
-              <li>Localization-ready terminology and instruction adaptability.</li>
-            </ul>
-          </article>
+          <div class="roadmap-stack" role="img" aria-label="Roadmap timeline from April to September with directional flow">
+            <article class="roadmap-node"><span>April 2026</span><h3>V0 • Discovery and Validation</h3><p>Scope lock, role matrix, pilot workflow validation, baseline data model, and acceptance criteria.</p></article>
+            <div class="roadmap-arrow">↓</div>
+            <article class="roadmap-node"><span>May 2026</span><h3>V1 • Core Planning MVP</h3><p>Site planner, species-layer planning v1, quantity engine, procurement outputs, and dashboard baseline.</p></article>
+            <div class="roadmap-arrow">↓</div>
+            <article class="roadmap-node"><span>June 2026</span><h3>V2 • Field Execution and SOP</h3><p>Guided checklist flows, layout templates, accountability tracking, and natural-input protocol hardening.</p></article>
+            <div class="roadmap-arrow">↓</div>
+            <article class="roadmap-node"><span>July 2026</span><h3>V3 • Monitoring Intelligence</h3><p>Photo cadence reminders, advisory alerts, leadership rollups, and forecast-assisted maturity signals.</p></article>
+            <div class="roadmap-arrow">↓</div>
+            <article class="roadmap-node"><span>August 2026</span><h3>V4 • Offering-Ready Stabilization</h3><p>Data quality hardening, permission polish, reporting readiness, and must-have sign-off by 31 August.</p></article>
+            <div class="roadmap-arrow">↓</div>
+            <article class="roadmap-node"><span>September 2026</span><h3>Offering Readiness</h3><p>Controlled UAT, narrative packaging, governance checks, and final offering milestone on 26 September.</p></article>
+          </div>
+
+          <div class="highlight kpi-block">
+            <h3>Success framework (complete)</h3>
+            <div class="kpi-grid">
+              <article><h4>Planning Efficiency</h4><p>Site planning completion time and procurement turnaround improvement.</p></article>
+              <article><h4>Execution Discipline</h4><p>On-time milestone logging and update cadence compliance.</p></article>
+              <article><h4>Ecological Outcomes</h4><p>Sapling survival trend visibility at 3, 6, and 12 months.</p></article>
+              <article><h4>Governance Quality</h4><p>Portfolio phase adherence, risk flag closure, and audit-ready oversight.</p></article>
+              <article><h4>Communication Readiness</h4><p>Publishable impact story quality and donor communication confidence.</p></article>
+              <article><h4>Acceptance Gate</h4><p>End-to-end pilot utility plus stable must-have scope by deadline.</p></article>
+            </div>
+          </div>
+
+          <div class="grid two mt">
+            <article class="card">
+              <h3>Must/Should/Could delivery discipline</h3>
+              <ul>
+                <li>Must scope is mandatory for pilot utility and sign-off.</li>
+                <li>Should scope is included only if stable and testable pre-deadline.</li>
+                <li>Could scope remains explicitly planned post-deadline without date risk.</li>
+              </ul>
+            </article>
+            <article class="card">
+              <h3>Immediate execution priorities</h3>
+              <ul>
+                <li>Final stakeholder walkthrough and scope lock.</li>
+                <li>Pilot geography and first candidate sites confirmation.</li>
+                <li>Ecological reviewer panel and approval workflow activation.</li>
+                <li>Weekly governance review cadence through August 2026.</li>
+              </ul>
+            </article>
+          </div>
         </div>
+      </section>
 
-        <article class="card card--wide">
-          <h3>Governance, ethics, and communication standards</h3>
-          <ul>
-            <li>Use respectful, non-commercial mission language for all ecological communication.</li>
-            <li>Maintain dignified storytelling for beneficiaries and local communities.</li>
-            <li>Avoid extractive narrative framing in impact representation.</li>
-            <li>Preserve clear human accountability in ecological and publishing decisions.</li>
-          </ul>
-        </article>
+      <section class="section" id="dependencies">
+        <div class="container">
+          <div class="section-head">
+            <span class="section-num">05</span>
+            <div>
+              <h2>Key technical or operational dependencies</h2>
+              <p>
+                Delivery requires aligned operational ownership, data discipline, platform readiness,
+                and clear governance boundaries for risk-controlled execution.
+              </p>
+            </div>
+          </div>
+
+          <div class="grid two">
+            <article class="card">
+              <h3>Technical dependencies</h3>
+              <ul>
+                <li>Authentication, role-based authorization, and auditable change history.</li>
+                <li>Reliable storage and media pipeline for monitoring evidence.</li>
+                <li>Notification channels for reminders and pending-action workflows.</li>
+                <li>Reporting stack for project and portfolio-level analytics visibility.</li>
+                <li>Advisory AI integration with transparency and confidence signaling.</li>
+              </ul>
+            </article>
+            <article class="card">
+              <h3>Operational dependencies</h3>
+              <ul>
+                <li>Local ecological validation partners and reviewer availability.</li>
+                <li>Nursery and vendor ecosystem mapping by geography.</li>
+                <li>SOP ownership, field training accountability, and participation continuity.</li>
+                <li>Consistent monitoring cadence commitment across project teams.</li>
+                <li>Community participation model with dignified engagement opportunities.</li>
+              </ul>
+            </article>
+          </div>
+
+          <div class="grid three mt">
+            <article class="card">
+              <h3>Data and analytics dependencies</h3>
+              <ul>
+                <li>Regional native species references and lifecycle context.</li>
+                <li>Climate and soil context where available.</li>
+                <li>Historical plantation outcomes for calibration where available.</li>
+                <li>Field media and metadata quality discipline for reliable insights.</li>
+              </ul>
+            </article>
+            <article class="card">
+              <h3>AI boundaries and safety</h3>
+              <ul>
+                <li>AI is assistive for planning, summarization, and forecasting.</li>
+                <li>AI does not make irreversible ecological or publication decisions.</li>
+                <li>Human and expert review required before external communication.</li>
+                <li>Disease and maturity conclusions require ecological validation.</li>
+              </ul>
+            </article>
+            <article class="card">
+              <h3>Risk and mitigation</h3>
+              <ul>
+                <li><strong>Species mismatch risk:</strong> mandatory expert checkpoint before plan lock.</li>
+                <li><strong>Monitoring inconsistency:</strong> cadence reminders and escalation views.</li>
+                <li><strong>Volunteer turnover:</strong> SOP continuity and project memory in-system.</li>
+                <li><strong>Reporting accuracy risk:</strong> publish only approved and verified evidence.</li>
+              </ul>
+            </article>
+          </div>
+
+          <div class="grid two mt">
+            <article class="card">
+              <h3>Governance and ethics standards</h3>
+              <ul>
+                <li>Use respectful, non-commercial mission language in all communication.</li>
+                <li>Keep beneficiary and local community narratives dignified and non-extractive.</li>
+                <li>Maintain clear human accountability in ecological and governance decisions.</li>
+                <li>Preserve culturally accurate and reverential framing where required.</li>
+              </ul>
+            </article>
+            <article class="card">
+              <h3>Core completion acceptance</h3>
+              <ul>
+                <li>Pilot project executes from site selection through procurement outputs.</li>
+                <li>SOP-guided execution works for new teams without external dependency gaps.</li>
+                <li>Monitoring entries flow into dashboard risk and leadership visibility.</li>
+                <li>Approved data converts into donor and beneficiary impact narratives.</li>
+              </ul>
+            </article>
+          </div>
+        </div>
       </section>
     </main>
 
     <footer class="footer">
-      <div class="container footer__content">
-        <p>Miyawaki Forest Planner • SRLC Stakeholder Presentation</p>
+      <div class="container footer-row">
+        <p>Miyawaki Forest Planner • Stakeholder Presentation • SRLC</p>
+        <a href="#top" aria-label="Back to top">Back to top ↑</a>
       </div>
     </footer>
   </body>
